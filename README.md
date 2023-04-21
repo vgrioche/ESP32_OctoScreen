@@ -2,7 +2,7 @@
 Ecran pour OctoPi
 Utilisation d'un écran tactile TFT SPI 240 X 320 (ILI9341) avec un ESP32 
 
-# Branchement #
+# Branchement écran #
 Voici comment j'ai branché l'écran à mon module ESP32:
 ```
     Broche VCC de l'écran : 3,3 V de l'ESP32
@@ -20,7 +20,14 @@ Voici comment j'ai branché l'écran à mon module ESP32:
     Broche T_DO           : D19
     Broche T_IRQ          : pas branchée
 ```    
- 
+
+# branchement DHT22 #
+```
+ Broche VCC du DHT22 : 3,3 V de l'ESP32
+ Broche Data         : D19
+ Broche GND          : GND
+``` 
+
 # Bibliothèque TFT_eSPI #
 La bibliothèque TFT_eSPI de Bodmer peut être installée au moyen du gestionnaire de bibliothèques de l'IDE Arduino.    
 dans le dossier TFT_eSPI/User_Setups : ajouter le fichier Setup42_ILI9341_ESP32.h
@@ -29,5 +36,11 @@ dans TFT_eSPI/User_Setup_Select.h :
 - decommenter la ligne #include <User_Setups/Setup42_ILI9341_ESP32.h> // Setup file for ESP32 and SPI ILI9341 240x320
 
 
+# Bibliothèque DHT #
+La bibliothèque DHT sensor library de Adafruit peut être installée au moyen du gestionnaire de bibliothèques de l'IDE Arduino.
+
+
+ ![photo](https://github.com/vgrioche/ESP32_OctoScreen/blob/main/IMG_20230421_180024.jpg)
  ![photo](https://github.com/vgrioche/ESP32_OctoScreen/blob/main/IMG_20230420_153549.jpg)
+
 
